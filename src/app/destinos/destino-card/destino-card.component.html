@@ -1,0 +1,5 @@
+<GridLayout columns="*, auto" rows="auto, auto" class="destino-card">
+  <Label row="0" col="0" [text]="destino.nombre" class="destino-nombre" textWrap="true" (tap)="seleccionar.emit()"></Label>
+  <Label row="1" col="0" [text]="destino.departamento" textWrap="true" (tap)="seleccionar.emit()"></Label>
+  <Button row="0" rowSpan="2" col="1" [text]="destino.favorito ? '★' : '☆'" class="boton-favorito" (tap)="favorito.emit()"></Button>
+</GridLayout>

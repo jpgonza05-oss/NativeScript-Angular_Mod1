@@ -1,0 +1,4 @@
+body { font-family: sans-serif; max-width: 640px; margin: auto; padding: 16px; }
+ul { list-style: none; padding: 0; }
+li { display: flex; justify-content: space-between; align-items: center; padding: 12px; margin-bottom: 8px; background: #eaf3ff; border-radius: 8px; }
+button { font-size: 24px; background: none; border: 0; cursor: pointer; }

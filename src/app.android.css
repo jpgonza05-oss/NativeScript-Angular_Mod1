@@ -1,0 +1,18 @@
+/* Estilos exclusivos de android. Mismos nombres de clase que en la otra plataforma, distintos valores. */
+@import '~@nativescript/theme/css/core.css';
+@import '~@nativescript/theme/css/default.css';
+@import './app-common.css';
+
+ActionBar { background-color: #2e7d32; color: #ffffff; }
+
+.destino-card {
+  margin: 6 2;
+  padding: 12;
+  background-color: #e8f5e9;
+  border-radius: 4;
+  android-elevation: 4;
+}
+
+.destino-nombre { font-family: 'sans-serif-medium'; color: #2e7d32; }
+.aviso { margin: 4 2 10 2; color: #2e7d32; }
+.boton-principal { background-color: #2e7d32; color: #ffffff; border-radius: 4; }

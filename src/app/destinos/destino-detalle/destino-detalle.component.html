@@ -1,0 +1,10 @@
+<ActionBar title="Detalle">
+  <NavigationButton text="Volver" android.systemIcon="ic_menu_revert" (tap)="onVolver()"></NavigationButton>
+</ActionBar>
+
+<StackLayout class="page-content" *ngIf="destino">
+  <Label [text]="destino.nombre" class="destino-nombre" textWrap="true"></Label>
+  <Label [text]="destino.departamento" textWrap="true"></Label>
+  <Label [text]="destino.descripcion" class="descripcion" textWrap="true"></Label>
+  <Button [text]="destino.favorito ? 'Quitar de favoritos' : 'Agregar a favoritos'" class="boton-principal" (tap)="onFavorito()"></Button>
+</StackLayout>

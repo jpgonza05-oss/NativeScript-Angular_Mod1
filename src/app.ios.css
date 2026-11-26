@@ -1,0 +1,19 @@
+/* Estilos exclusivos de ios. Mismos nombres de clase que en la otra plataforma, distintos valores. */
+@import '~@nativescript/theme/css/core.css';
+@import '~@nativescript/theme/css/default.css';
+@import './app-common.css';
+
+ActionBar { background-color: #0a66c2; color: #ffffff; }
+
+.destino-card {
+  margin: 6 2;
+  padding: 12;
+  background-color: #eaf3ff;
+  border-radius: 16;
+  border-width: 1;
+  border-color: #0a66c2;
+}
+
+.destino-nombre { font-family: 'Avenir Next'; color: #0a66c2; }
+.aviso { margin: 4 2 10 2; color: #0a66c2; }
+.boton-principal { background-color: #0a66c2; color: #ffffff; border-radius: 16; }

@@ -1,0 +1,34 @@
+<RadSideDrawer [drawerTransition]="sideDrawerTransition">
+  <GridLayout tkDrawerContent rows="auto, *" class="sidedrawer">
+    <StackLayout row="0" class="sidedrawer-header">
+      <Label text="Destinos HN" class="header-title"></Label>
+      <Label text="Descubre Honduras"></Label>
+    </StackLayout>
+    <ScrollView row="1">
+      <StackLayout>
+        <GridLayout columns="32, *" class="nav-item" [class.selected]="isSelected('/home')" (tap)="onNavItemTap('/home')">
+          <Label col="1" text="Inicio"></Label>
+        </GridLayout>
+        <GridLayout columns="32, *" class="nav-item" [class.selected]="isSelected('/browse')" (tap)="onNavItemTap('/browse')">
+          <Label col="1" text="Explorar"></Label>
+        </GridLayout>
+        <GridLayout columns="32, *" class="nav-item" [class.selected]="isSelected('/search')" (tap)="onNavItemTap('/search')">
+          <Label col="1" text="Buscar"></Label>
+        </GridLayout>
+        <GridLayout columns="32, *" class="nav-item" [class.selected]="isSelected('/featured')" (tap)="onNavItemTap('/featured')">
+          <Label col="1" text="Destacados"></Label>
+        </GridLayout>
+        <GridLayout columns="32, *, auto" class="nav-item" [class.selected]="isSelected('/destinos')" (tap)="onNavItemTap('/destinos')">
+          <Image col="0" src="res://ic_destino" class="nav-icon"></Image>
+          <Label col="1" text="Destinos"></Label>
+          <Label col="2" [text]="'★ ' + destinosService.totalFavoritos"></Label>
+        </GridLayout>
+        <GridLayout columns="32, *" class="nav-item" [class.selected]="isSelected('/settings')" (tap)="onNavItemTap('/settings')">
+          <Label col="1" text="Ajustes"></Label>
+        </GridLayout>
+      </StackLayout>
+    </ScrollView>
+  </GridLayout>
+
+  <page-router-outlet tkMainContent></page-router-outlet>
+</RadSideDrawer>

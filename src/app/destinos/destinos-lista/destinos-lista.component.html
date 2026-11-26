@@ -1,0 +1,15 @@
+<ActionBar title="Destinos">
+  <ActionItem icon="res://ic_menu" ios.position="left" (tap)="onDrawerButtonTap()"></ActionItem>
+</ActionBar>
+
+<ScrollView class="page-content">
+  <StackLayout>
+    <Label [text]="mensajePlataforma" class="aviso" textWrap="true"></Label>
+    <ns-destino-card
+      *ngFor="let item of destinos"
+      [destino]="item"
+      (seleccionar)="onVerDetalle(item)"
+      (favorito)="onFavorito(item)">
+    </ns-destino-card>
+  </StackLayout>
+</ScrollView>

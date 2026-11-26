@@ -1,0 +1,7 @@
+node_modules/
+platforms/
+hooks/
+dist/
+.angular/
+*.log
+.DS_Store
